@@ -1,0 +1,22 @@
+<mat-sidenav-container #sidenav class="mainContainer">
+        <mat-toolbar>
+            <button mat-icon-button="" class="btnSidenav" (click)="sidenav.open()">
+                <i class="fa fa-list"></i>
+            </button>
+            <h4>PT BPR DIORI GANDA</h4>
+            <span class="toolbar-spacer"></span>
+            <button mat-raised-button (click)="onLogout()">Logout</button>
+          </mat-toolbar>
+    
+          <mat-sidenav mode="over" #sidenav class="bg-primary">
+              <mat-list role="list">
+                  <mat-list-item role="listitem"><button mat-raised-button routerLink="categori" (click)="sidenav.close()">Category</button></mat-list-item>
+                  <mat-list-item role="listitem"><button mat-raised-button routerLink="about" (click)="sidenav.close()">Blog</button></mat-list-item>
+                </mat-list>
+          </mat-sidenav>
+    
+          <div class="container">
+                <router-outlet></router-outlet>
+          </div>
+    
+    </mat-sidenav-container>
